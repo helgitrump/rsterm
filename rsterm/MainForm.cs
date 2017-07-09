@@ -1,8 +1,10 @@
 ﻿/*
  * Oleg Kozyr
+ * Created by SharpDevelop.
  * Date: 09.07.2017
  * 
  */
+ 
 using System;
 using System.Collections.Generic;
 using System.Drawing;

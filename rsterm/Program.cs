@@ -1,11 +1,10 @@
 ﻿/*
+ * Oleg Kozyr
  * Created by SharpDevelop.
- * User: user
  * Date: 09.07.2017
- * Time: 11:27
  * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
+ 
 using System;
 using System.Windows.Forms;
 
