@@ -37,6 +37,7 @@ namespace rsterm
 			InitializeComponent();
 			
 			InitRS_Port();
+			InitMainFormWidgets();
 		}
 		
 		private void InitRS_Port()
@@ -51,6 +52,24 @@ namespace rsterm
             rsPort.DtrEnable = _RS_Init_DSR_Enable;
             rsPort.ReadTimeout = 2000;
             rsPort.WriteTimeout = 2000;
+        }
+		
+		private void InitMainFormWidgets()
+        {            
+            cmb_RS_PortName.Items.AddRange(SerialPort.GetPortNames());
+            cmb_RS_PortName.SelectedIndex = 0;
+            numUD_RS_BaudRate.Minimum = 0;
+            numUD_RS_BaudRate.Maximum = Int32.MaxValue;
+            numUD_RS_BaudRate.Value = _RS_Init_BaudRate;
+            cmb_RS_Parity.DataSource = Enum.GetValues(typeof(Parity));
+            cmb_RS_Parity.SelectedIndex = 0;
+            numUD_RS_DataBits.Value = _RS_Init_DataBits;
+            cmb_RS_StopBits.DataSource = Enum.GetValues(typeof(StopBits));
+            cmb_RS_StopBits.SelectedIndex = 1;
+            ckb_RS_RTS_Enable.Checked = false;
+            ckb_RS_DTR_Enable.Checked = false;
+            btn_RS_OpenPort.Enabled = true;
+            btn_RS_ClosePort.Enabled = false;
         }
 		
 	}
