@@ -18,7 +18,8 @@ namespace rsterm
 	/// </summary>
 	public partial class MainForm : Form
 	{
-
+		#region Fields
+		
 		/// <summary>
 		/// Field stores SerialPort object
 		/// </summary>			
@@ -37,6 +38,8 @@ namespace rsterm
         private const bool _RS_Init_RST_Enable = false;
         private const bool _RS_Init_DSR_Enable = false;
         #endregion RS initialization fields		
+        
+		#endregion Fields	
 		
 		public MainForm()
 		{
