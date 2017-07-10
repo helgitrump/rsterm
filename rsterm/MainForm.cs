@@ -36,9 +36,7 @@ namespace rsterm
 			//
 			InitializeComponent();
 			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
+			InitRS_Port();
 		}
 		
 		private void InitRS_Port()
