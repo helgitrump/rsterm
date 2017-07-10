@@ -18,7 +18,7 @@ namespace rsterm
 	/// </summary>
 	public partial class MainForm : Form
 	{
-        #region Filds
+        #region Fields
         private SerialPort rsPort;
         private const string _RS_Init_PortName = "COM1";
         private const int _RS_Init_BaudRate = 9600;
@@ -27,7 +27,7 @@ namespace rsterm
         private const StopBits _RS_Init_StopBits = StopBits.One;
         private const bool _RS_Init_RST_Enable = false;
         private const bool _RS_Init_DSR_Enable = false;
-        #endregion Filds		
+        #endregion Fields		
 		
 		public MainForm()
 		{
@@ -42,7 +42,7 @@ namespace rsterm
 
 		/// <summary>
 		/// Method initializes rsPort field to default value using
-		/// RS initialization filds
+		/// RS initialization fields
 		/// </summary>		
 		private void InitRS_Port()
         {
@@ -57,7 +57,10 @@ namespace rsterm
             rsPort.ReadTimeout = 2000;
             rsPort.WriteTimeout = 2000;
         }
-		
+
+		/// <summary>
+		/// Method initializes MainForm widgets to default states
+		/// </summary>			
 		private void InitMainFormWidgets()
         {            
             cmb_RS_PortName.Items.AddRange(SerialPort.GetPortNames());
