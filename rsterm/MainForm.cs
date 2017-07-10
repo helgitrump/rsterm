@@ -18,12 +18,17 @@ namespace rsterm
 	/// </summary>
 	public partial class MainForm : Form
 	{
+
+		/// <summary>
+		/// Field stores SerialPort object
+		/// </summary>			
+		private SerialPort rsPort;
+		
 		/// <summary>
 		/// Fields are used to initialize SerialPost object and 
 		/// MainForm widgets
 		/// </summary>		
-        #region RS initialization fields
-        private SerialPort rsPort;
+        #region RS initialization fields        
         private const string _RS_Init_PortName = "COM1";
         private const int _RS_Init_BaudRate = 9600;
         private const Parity _RS_Init_Parity = Parity.None;
