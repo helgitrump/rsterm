@@ -39,9 +39,13 @@ namespace rsterm
 			InitRS_Port();
 			InitMainFormWidgets();
 		}
-		
+
+		/// <summary>
+		/// Method initializes rsPort field to default value using
+		/// RS initialization filds
+		/// </summary>		
 		private void InitRS_Port()
-        {// Initialize rsPort field
+        {
             rsPort = new SerialPort(
                 _RS_Init_PortName, 
                 _RS_Init_BaudRate,
